@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>midterm</title>
+<link rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" >
+
+</head>
+<body>
+	<div class="container">
+		<form>
+					
+			<div class = "input-group">
+				<label>Username</label>
+				<input type="text" placeholder="Enter a username" id="contact-username" onkeyup="validateUsername()">
+				<span id="username-error"></span>
+			</div>
+			<div class="input-group">
+				<label>E-mail</label>
+				<input type="email" placeholder="Enter your Email" id="contact-email" onkeyup="validateEmail()">
+				<span id="email-error"> </span>
+			</div>
+			
+			<div class = "input-group" id = "contact-position" onkeyup="validatePosition()" >
+				<label for ="Position"> Position:</label>
+				
+				<select  name="position" id="position">
+				<option value="not selected">Not selected</option>
+				<option value="engineer">Engineer</option>
+				<option value="doctor">Doctor</option>
+				<option value="mechanic">Mechanic</option>	
+				</select>
+				<span id="position-error"> </span>
+		
+			</div>
+			
+			<div class = "input-group">
+				<label for ="Type:">Type: </label><br>
+				
+				<input type="radio" name="type" id = "f" value="full">
+				<label for="full">Full-time</label><br>
+				<input type="radio" name="type" id = "p" value="part" >
+				<label for="part">Part-time</label>
+				
+			
+				<span id="type-error"></span>
+			</div>
+	
+
+			<button onclick ="return validateForm()">Submit</button>
+			<span id="submit-error"></span>
+			
+		</form>
+	</div>
+	<script src="java.js"></script>
+</body>
+</html>
